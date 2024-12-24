@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicklist</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img class="desktop-only" src="assets/logo.png" alt="logo quicklist">
+        </div>
+        <div class="container-quicklist">
+            <div class="back">
+                <p>Voltar</p>
+            </div>
+            <h1>Compras da semana</h1>
+            <div class="input-wrapper">
+                <input type="text" id="input-item" placeholder="Adicione um novo item">
+                <button class="btn-item" id="new-item">Adicionar item</button>
+            </div>
+            <div class="itens-list">
+                <ul id="my-list">
+                </ul>
+            </div>
+            <div class="notificantions">
+            <div class="hide-screen" id="alertNotification">
+                <div class="removed-notice">
+                  <div>
+                  <img src="assets/icon/warning-circle-filled.svg" alt="icone de aviso">
+                  <p>O item foi removido da lista</p>
+                  </div>
+                  <button class="removeX" id="removeNotification">
+                    <img src="assets/icon/delete-small.svg" alt="icone de delete, da mensagem"></button>
+                </div>
+            </div>
+            <div class="hide-screen" id="emptyNotification">
+                <div class="removed-notice">
+                  <div>
+                  <img src="assets/icon/warning-circle-filled.svg" alt="icone de aviso">
+                  <p>Adicione um item.</p>
+                  </div>
+                  <button class="removeX" id="remove-Notification">
+                  <img src="assets/icon/delete-small.svg" alt="icone de delete, da mensagem"></button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

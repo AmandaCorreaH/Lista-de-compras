@@ -1,0 +1,196 @@
+@import url(utility.css);
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /*Colors*/
+    --background-primary: #F4f5fb;
+    --background-secondary: #ffffff;
+    --color-brand: #ca3884;
+    --color-brand-hover: #A52C6B;
+    --color-danger: #C93847;
+    
+    --content-primary: #080B12;
+    --content-secondary: #374151;
+    --content-tertiary: #9CA3AF;
+    --always-white: #ffffff;
+    
+    --border-primary: #D1D5DB;
+    --border-hover: #B9C2D0;
+    
+    /*Fonts*/
+
+    --inter-ft: "Inter", serif;
+    --title: 700 1.4rem/2rem var(--inter-ft);
+    --label: 600 1rem/1.25rem var(--inter-ft);
+    --paragraph: 500 1rem/1.25rem var(--inter-ft);
+    --link: 500 0.80rem/1rem var(--inter-ft);
+
+    --py: 2rem;
+}
+
+body{
+    color: var(--content-primary);
+    background-color: var(--background-primary);
+}
+
+.logo{
+    text-align: center;
+    padding-block: 1.5rem 3.8rem;
+}
+
+.container-quicklist{
+    width: 20.4rem;
+    margin: auto;
+
+    & .back{
+        font: var(--link);
+        color: var(--color-brand);
+        padding-bottom: 1rem;
+    }
+
+    & h1{
+        font: var(--title);
+        padding-bottom: 1.7rem;
+    }
+
+    & .input-wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        input{
+            width: 100%;
+            appearance: none;
+            outline-color: var(--color-brand);
+
+            font: 500 1rem/1rem var(--inter-ft);
+        }
+        
+        input[type="text"]{
+            padding: 0.6rem 1.1rem;
+            border-radius: 0.75rem;
+            border: 2px solid var(--border-primary);
+        }
+
+        input[type="text"]:hover{
+            border-color: var(--border-hover);
+        }
+
+        .btn-item{
+            padding: 0.75rem 6.1rem;
+            background-color: var(--color-brand);
+            color: var(--always-white);
+            border: none;
+            border-radius: 0.75rem;
+
+            font: 500 1rem/20px var(--inter-ft);
+            transition: 170ms ease-in;
+        }
+
+        .btn-item:hover{
+            background-color: var(--color-brand-hover);
+        }
+
+    }
+
+
+    & .itens-list{
+        padding-block: 2.25rem;
+
+        & ul{
+            list-style: none;
+            font: var(--paragraph);
+        }
+
+        & li{
+            padding: 0.5rem 0.75rem;
+            background-color: var(--background-secondary);
+            border-radius: 0.75rem;
+            margin-bottom: 0.75rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & li input{
+            appearance: none;
+            width: 100%;
+        }
+        & input[type="checkbox"]{
+            width: 1rem;
+            height: 1rem;
+            background-image: url(/assets/icon/checkbox.svg);
+        }
+
+        & input[type="checkbox"]:hover{
+            width: 1rem;
+            height: 1rem;
+            background-image: url(/assets/icon/checkbox-hover.svg);
+        }
+
+        & input[type="checkbox"]:checked{
+            background-image: url(/assets/icon/checkbox-checked.svg);
+        }
+
+        & button{
+            border: none;
+            background-color: transparent;
+        }
+    }
+
+    & .removed-notice{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background-color: var(--color-danger);
+        border-radius: 0.7rem;
+        
+        & > div {
+            display: flex;
+            gap: 1rem;
+            font: var(--label);
+            color: var(--always-white);
+        }
+
+        & .removeX{
+            display: flex;
+            align-items: center;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+
+@media (width >= 80em){
+    .container-quicklist{
+        width: 39.1rem;
+
+        & .input-wrapper{
+            flex-direction: row;
+
+            input{
+                width: 70%;
+            }
+
+            & .btn-item{
+                padding: 0.75rem 1.5rem;
+            }
+        }
+
+        & .itens-list{
+            padding-bottom: 1.5rem;
+        }
+    }
+}
