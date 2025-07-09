@@ -10,11 +10,11 @@
     <title>Quicklist</title>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <div class="logo">
             <img class="desktop-only" src="assets/logo.png" alt="logo quicklist">
         </div>
-        <div class="container-quicklist">
+        <section class="container-quicklist">
             <div class="back">
                 <p>Voltar</p>
             </div>
@@ -24,34 +24,32 @@
                 <button class="btn-item" id="new-item">Adicionar item</button>
             </div>
             <div class="itens-list">
-                <ul id="my-list">
-                </ul>
+                <ul id="my-list"></ul>
             </div>
             <div class="notificantions">
-            <div class="hide-screen" id="alertNotification">
+            <div class="hide-screen" id="itemRemoved">
                 <div class="removed-notice">
                   <div>
                   <img src="assets/icon/warning-circle-filled.svg" alt="icone de aviso">
                   <p>O item foi removido da lista</p>
                   </div>
-                  <button class="removeX" id="removeNotification">
+                  <button class="removeX" id="removeItem">
                     <img src="assets/icon/delete-small.svg" alt="icone de delete, da mensagem"></button>
                 </div>
             </div>
-            <div class="hide-screen" id="emptyNotification">
+            <div class="hide-screen" id="addItem">
                 <div class="removed-notice">
                   <div>
                   <img src="assets/icon/warning-circle-filled.svg" alt="icone de aviso">
                   <p>Adicione um item.</p>
                   </div>
-                  <button class="removeX" id="remove-Notification">
+                  <button class="removeX" id="removeAdditem">
                   <img src="assets/icon/delete-small.svg" alt="icone de delete, da mensagem"></button>
                 </div>
             </div>
             </div>
-        </div>
-    </div>
-
+        </section>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>

@@ -168,6 +168,9 @@ body{
             cursor: pointer;
         }
     }
+    .removeBtn img{
+        cursor: pointer;
+    }
 }
 
 
